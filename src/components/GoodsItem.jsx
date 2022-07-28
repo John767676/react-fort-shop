@@ -18,6 +18,14 @@ const reducer = (state, {type}) => {
             return {
                 num: '#0000FF'
             }
+        case 'epic':
+            return {
+                num: "#8900FF"
+            }
+        case 'legendary':
+            return {
+                num: "#FFA500"
+            }
         case 'mythic':
             return {
                 num: '#FFD700'
@@ -26,9 +34,17 @@ const reducer = (state, {type}) => {
             return {
                 num: '#ADD8E6'
             }
-        case 'epic':
+        case 'transcendent':
             return {
-                num: "#8900FF"
+                num: '#ffcccb'
+            }
+        case 'marvel Series':
+            return {
+                num: '#8B0000'
+            }
+        case 'dark Series':
+            return {
+                num: '#FF00FF'
             }
     }
 }
