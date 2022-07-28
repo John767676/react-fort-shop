@@ -1,15 +1,16 @@
-import React from 'react';
+import React, {useContext} from 'react';
+import {ShopContext} from "../context";
 
 const BasketItem = (props) => {
+    const {removeFromBasket, addCount, decreaseCount} = useContext(ShopContext)
+
     const {
         id,
         name,
         price,
         quantity,
-        removeFromBasket = Function.prototype,
-        addCount = Function.prototype,
-        decreaseCount = Function.prototype
     } = props
+
 
     return (
         <li className="collection-item" id={id}>

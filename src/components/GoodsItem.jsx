@@ -1,4 +1,5 @@
-import React, {useEffect, useReducer} from 'react';
+import React, {useEffect, useReducer, useContext} from 'react';
+import {ShopContext} from "../context";
 
 const reducer = (state, {type}) => {
     switch (type) {
@@ -58,8 +59,9 @@ const GoodsItem = (props) => {
         icon,
         image,
         rarity,
-        addToBasket = Function.prototype
     } = props
+
+    const {addToBasket} = useContext(ShopContext)
 
     const [{num}, dispatch] = useReducer(reducer, {num: '#FFFFFF'})
 
